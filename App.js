@@ -2,11 +2,12 @@ import React from 'react'
 import { StyleSheet, Text, View, StatusBar, ActivityIndicator, TouchableOpacity, Image } from 'react-native'
 import * as ImagePicker from "expo-image-picker"
 import * as tf from '@tensorflow/tfjs'
-import { fetch } from '@tensorflow/tfjs-react-native'
+// import { fetch } from '@tensorflow/tfjs-react-native'
 import * as mobilenet from '@tensorflow-models/mobilenet'
 import Constants from 'expo-constants'
 import * as Permissions from 'expo-permissions'
 import * as jpeg from 'jpeg-js'
+import { changeImage2RawImageData } from "./api/index"
 
 class App extends React.Component {
   state = {
